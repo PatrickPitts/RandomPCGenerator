@@ -5,15 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Models\CharacterClass.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="wwwroot\data\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Models\CharacterClass.cs" />
   </ItemGroup>
 
   <ItemGroup>
