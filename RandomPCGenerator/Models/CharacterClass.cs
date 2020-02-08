@@ -17,7 +17,7 @@ namespace RandomPCGenerator.Models
         public string SpellModifier { set; get; }
         public string Source { set; get; } = "PHB";
         public int ClassLevel {set; get;} = 1;
-        public IList<string> ClassFeatures { set; get; }
+        public IList<string> ClassFeatures { set; get; } = new List<string>();
 
         public CharacterClass() { }
     }

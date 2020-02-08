@@ -34,5 +34,22 @@ namespace RandomPCGenerator.Processors
             }
             return statBlock;
         }
+
+        public static int[] RandomTheNumbers()
+        {
+            Random random = new Random();
+            List<int> TheNumbers = new List<int> { 15, 14, 13, 12, 10, 8 };
+            List<int> Results = new List<int>();
+            TheNumbers.OrderBy<int, int>((item) => random.Next());
+            int RandomIndex = 0;
+            while (TheNumbers.Count > 0)
+            {
+                RandomIndex = random.Next(TheNumbers.Count);
+                Results.Add(TheNumbers[RandomIndex]);
+                TheNumbers.RemoveAt(RandomIndex);
+            }
+           
+            return Results.ToArray();
+        }
     }
 }

@@ -1,0 +1,22 @@
+@using RandomPCGenerator.Models
+@{
+    ViewData["Title"] = "Here's a Random Character";
+    var Character = (CharacterClass) ViewData["CharacterClass"];
+    var Background = (Background) ViewData["Background"];
+    var Stats = (int[])ViewData["Stats"];
+
+}
+
+
+<div class="text-center">
+    <h3 class="display-4">@Background.Name @Character.ClassName</h3>
+    <ul>
+        <li>@Stats[0]</li>
+        <li>@Stats[1]</li>
+        <li>@Stats[2]</li>
+        <li>@Stats[3]</li>
+        <li>@Stats[4]</li>
+        <li>@Stats[5]</li>
+    </ul>
+
+</div>

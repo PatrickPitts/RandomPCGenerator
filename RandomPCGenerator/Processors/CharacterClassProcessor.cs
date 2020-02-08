@@ -28,14 +28,20 @@ namespace RandomPCGenerator.Processors
             for(int i = 1; i <= Character.ClassLevel; i++)
             {
                 JArray features = (JArray) CoreClassFeatures[i.ToString()];
-                foreach(String feature in features)
+                if(features != null)
                 {
-                    Character.ClassFeatures.Add(feature);
-                }
+                    foreach (String feature in features)
+                    {
+                        Character.ClassFeatures.Add(feature);
+                    }
+                } 
+                
             }
+            
 
-            JObject JSubclasses = ChrClassObject["Subclasses"];
-            IList<string> SubclassOptions = JSubclasses.Properties().Select(p => p.Name).ToList();
+            //JObject JSubclasses = ChrClassObject["Subclasses"];
+            IList<string> SubclassOptions = ((JObject) ChrClassObject["Subclasses"]).Properties().Select(p => p.Name).ToList();
+            Character.SubclassName = SubclassOptions[random.Next(SubclassOptions.Count)];
 
 
             return Character;

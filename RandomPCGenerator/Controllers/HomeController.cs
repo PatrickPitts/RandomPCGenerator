@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RandomPCGenerator.Models;
+using RandomPCGenerator.Processors;
 
 namespace RandomPCGenerator.Controllers
 {
@@ -25,6 +26,14 @@ namespace RandomPCGenerator.Controllers
 
         public IActionResult Privacy()
         {
+            return View();
+        }
+
+        public IActionResult RandomChr()
+        {
+            ViewData["CharacterClass"] = CharacterClassProcessor.getRandomCharacterClass(20);
+            ViewData["Background"] = PersonalityProcessor.randomBackground();
+            ViewData["Stats"] = RandomStats.RandomTheNumbers();
             return View();
         }
 
