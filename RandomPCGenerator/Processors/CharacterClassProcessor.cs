@@ -10,10 +10,10 @@ namespace RandomPCGenerator.Processors
 {
     public class CharacterClassProcessor
     {
-        public static CharacterClass getRandomCharacterClass()
+        public static CharacterClass getRandomCharacterClass(int ChrLevel)
         {
             CharacterClass Character = new CharacterClass();
-
+            Character.ClassLevel = ChrLevel;
             Random random = new Random();
             JObject obj = JObject.Parse(System.IO.File.ReadAllText(@"wwwroot/data/ChrClass.json"));
 
@@ -24,7 +24,18 @@ namespace RandomPCGenerator.Processors
 
             Character.HitDie = (int) ChrClassObject["Hit Die"];
             Character.SavingThrows = ((JArray) ChrClassObject["Saving Throws"]).Select(p => (string)p).ToArray();
+            JObject CoreClassFeatures = (JObject) ChrClassObject["Core Features"];
+            for(int i = 1; i <= Character.ClassLevel; i++)
+            {
+                JArray features = (JArray) CoreClassFeatures[i.ToString()];
+                foreach(String feature in features)
+                {
+                    Character.ClassFeatures.Add(feature);
+                }
+            }
 
+            JObject JSubclasses = ChrClassObject["Subclasses"];
+            IList<string> SubclassOptions = JSubclasses.Properties().Select(p => p.Name).ToList();
 
 
             return Character;

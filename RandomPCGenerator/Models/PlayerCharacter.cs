@@ -7,8 +7,8 @@ namespace RandomPCGenerator.Models
 {
     public class PlayerCharacter
     {
-        public Background background { set; get; }
-        public Dictionary<string, string> Features { set; get; }
+        public Background Background { set; get; }
+        public IList<string> FeatureNames { set; get; }
         public int Str { set; get; }
         public int Dex { set; get; }
         public int Con { set; get; }
