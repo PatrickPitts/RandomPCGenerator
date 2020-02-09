@@ -4,6 +4,8 @@
     var Character = (CharacterClass) ViewData["CharacterClass"];
     var Background = (Background) ViewData["Background"];
     var Stats = (int[])ViewData["Stats"];
+    var Govt = (String)ViewData["Govt"];
+
 
 }
 
@@ -19,4 +21,5 @@
         <li>@Stats[5]</li>
     </ul>
 
+    <p>@Character</p>
 </div>
