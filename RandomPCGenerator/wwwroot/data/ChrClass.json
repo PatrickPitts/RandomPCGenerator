@@ -2,6 +2,16 @@
   "_Class": {
     "Hit Die": 0,
     "Saving Throws": [ "xxx", "xxx" ],
+    "Equipment": [],
+    "Preferred Attributes": {
+      "_Prop": {
+        "_Dive": [ "s", "a" ]
+      },
+      "Preferred Attributes": [[],[]]
+    },
+    "Proficiencies": [],
+    "Skill Choices": [],
+    "Num Skill Choices": 0,
     "Core Features": {
       "1": [],
       "2": [],
@@ -70,6 +80,30 @@
   "Barbarian": {
     "Hit Die": 12,
     "Saving Throws": [ "Str", "Con" ],
+    "Equipment": {
+      "_Prop": {
+        "_Dive": [ "a", "s", "a" ]
+
+      },
+      "Equipment": [
+        [ "Great Axe", "Martial Melee Weapon" ],
+        [ "Two Handaxes", "Simple Weapon" ],
+        "Explorer's Pack",
+        "Four Javelins"
+      ]
+    },
+    "Preferred Attributes": {
+      "_Prop": {
+        "_Dive": [ "s", "a" ]
+      },
+      "Preferred Attributes": [
+        ["Str", "Con"]
+      ]
+    },
+    
+    "Proficiencies": [ "Light Armor", "Medium Armor", "Shields", "Simple Weapons", "Martial Weapons" ],
+    "Skill Choices": [ "Animal Handling", "Athletics", "Intimidation", "Nature", "Perception", "Survival" ],
+    "Num Skill Choices": 2,
     "Core Features": {
       "1": [ "Rage", "Unarmored Defense" ],
       "2": [ "Reckless Attack", "Danger Sense" ],
@@ -110,8 +144,43 @@
   "Bard": {
     "Hit Die": 8,
     "Saving Throws": [ "Dex", "Cha" ],
+    "Equipment": {
+      "_Prop": {
+        "_Dive": [ "a", "s", "a" ]
+
+      },
+      "Equipment": [
+        [ "Rapier", "Longsword", "Any Simple Weapon" ],
+        [ "Diplomat's Pack", "Entertainer's Pack" ],
+        [ "Lute", "Any Musical Instrument" ],
+        "Leather Armor",
+        "Dagger"
+      ]
+    },
+    "Preferred Attributes": {
+      "_Prop": {
+        "_Dive": [ "s", "a" ]
+      },
+      "Preferred Attributes": [
+        ["Cha","Dex"]
+      ]
+    },
+    "Preferred Starting Spells": [ "Dancing Lights", "Vicious Mockery", "Charm Person", "Detect Magic", "Healing Word", "Thunderwave" ],
+    "Proficiencies": [
+      "Light Armor",
+      "Simple Weapons",
+      "Hand Crossbows",
+      "Longswords",
+      "Rapiers",
+      "Shortswords",
+      "Any Musical Instrument",
+      "Any Musical Instrument",
+      "Any Musical Instrument"
+    ],
+    "Skill Choices": [ "Any" ],
+    "Num Skill Choices": 3,
     "Core Features": {
-      "1": [ "Bardic Inspiration", "Spellcasting" ],
+      "1": [ "Bardic Inspiration", "Spellcasting", "_EnableMagic" ],
       "2": [ "Jack of All Trades", "Song of Rest" ],
       "4": [ "Ability Score Improvement" ],
       "5": [ "Font of Inspiration", "Bardic Inspiration+" ],
@@ -173,8 +242,37 @@
   "Cleric": {
     "Hit Die": 8,
     "Saving Throws": [ "Wis", "Cha" ],
+    "Equipment": {
+      "_Prop": {
+        "_Dive": [ "a", "s", "a" ]
+
+      },
+      "Equipment": [
+        [ "Mace", "Warhammer (pre:proficiency:Warhammer)" ],
+        [ "Scale Mail", "Leather Armor", "Chain Mail (pre:proficiency:Chain Mail)" ],
+        [
+          [ "Light Crossbow", "20 Bolts" ],
+          "Any Simple Weapon"
+        ],
+        [ "Priest's Pack", "Explorer's Pack" ],
+        "Shield",
+        "Holy Symbol"
+      ]
+    },
+    "Preferred Attributes": {
+      "_Prop": {
+        "_Dive": [ "s", "a" ]
+      },
+      "Preferred Attributes": [
+        ["Wis", "Con"],
+        ["Wis", "Str"]
+      ]
+    },
+    "Proficiencies": [ "Light Armor", "Medium Armor", "Shields", "All Simple Weapons" ],
+    "Skill Choices": [ "History", "Insight", "Medicine", "Persuasion", "Religion" ],
+    "Num Skill Choices": 2,
     "Core Features": {
-      "1": [ "Spellcasting" ],
+      "1": [ "Spellcasting", "_EnableMagic" ],
       "2": [ "Channel Divinity(1)" ],
       "3": [],
       "4": [ "Ability Score Improvement" ],
@@ -339,8 +437,47 @@
   "Druid": {
     "Hit Die": 8,
     "Saving Throws": [ "Int", "Wis" ],
+    "Equipment": {
+      "_Prop": {
+        "_Dive": [ "a", "s", "a" ]
+
+      },
+      "Equipment": [
+        [ "Wooden Shield", "Any Simple Weapon" ],
+        [ "Scimitar", "Any Simple Melee Weapon" ],
+        "Leather Armor",
+        "Explorer's Pack",
+        "Druidic Focus"
+      ]
+    },
+    "Preferred Attributes": {
+      "_Prop": {
+        "_Dive": [ "s", "a" ]
+      },
+      "Preferred Attributes": [
+        ["Wis","Con"]
+      ]
+    },
+    "Proficiencies": [
+      "Light Armor",
+      "Medium Armor",
+      "Shields",
+      "Clubs",
+      "Daggers",
+      "Darts",
+      "Javelins",
+      "Maces",
+      "Quarterstaffs",
+      "Scimitars",
+      "Sickles",
+      "Slings",
+      "Spears",
+      "Herbalism Kit"
+    ],
+    "Skill Choices": [ "Arcana", "Animal Handling", "Insight", "Medicine", "Nature", "Perception", "Religion", "Survival" ],
+    "Num Skill Choices": 2,
     "Core Features": {
-      "1": [ "Druidic", "Spellcasting" ],
+      "1": [ "Druidic", "Spellcasting", "_EnableMagic" ],
       "2": [ "Wild Shape", "Druid Circle" ],
       "3": [],
       "4": [ "Ability Score Improvement", "Wild Shape Improvement" ],
@@ -452,8 +589,41 @@
   "Fighter": {
     "Hit Die": 10,
     "Saving Throws": [ "Str", "Con" ],
+    "Equipment": {
+      "_Prop": {
+        "_Dive": [ "a", "s", "a" ]
+
+      },
+      "Equipment": [
+        [
+          "Chain Mail",
+          [ "Leather Armor", "Longbow", "20 Arrows" ]
+        ],
+        [
+          [ "Any Martial Weapon", "Shield" ],
+          [ "Any Martial Weapon", "Any Martial Weapon" ]
+        ],
+        [
+          [ "Light Crossbow", "20 Bolts" ],
+          [ "Two Handaxes" ]
+        ],
+        [ [ "Dungeoneer's Pack", "Explorer's Pack" ] ]
+      ]
+    },
+    "Preferred Attributes": {
+      "_Prop": {
+        "_Dive": [ "s", "a" ]
+      },
+      "Prefered Attributes": [
+        [ "Str", "Dex" ],
+        [ "Con", "Int (pre:subclass:Eldritch Knight)" ]
+      ]
+    },
+    "Proficiencies": [ "All Armor", "Shields", "Simple Weapons", "Martial Weapons" ],
+    "Skill Choices": [ "Acrobatics", "Animal Handling", "Athletics", "History", "Insight", "Intimidation", "Perception", "Survival" ],
+    "Num Skill Choices": 2,
     "Core Features": {
-      "1": [ "Fighting Style", "Second Wind" ],
+      "1": [ "Fighting Style (c)", "Second Wind" ],
       "2": [ "Action Surge (1)" ],
       "3": [],
       "4": [ "Ability Score Improvement" ],
@@ -472,16 +642,16 @@
       "17": [],
       "18": [],
       "19": [ "Ability Score Improvement" ],
-      "20": [ "Extra Attack (3)" ]
+      "20": [ "Extra Attack (3)" ],
+      "Figthing Style": [
+        "Archery",
+        "Defense",
+        "Dueling",
+        "Great Weapon Fighting",
+        "Protection",
+        "Two-Weapon Fighting"
+      ]
     },
-    "Figthing Style": [
-      "Archery",
-      "Defense",
-      "Dueling",
-      "Great Weapon Fighting",
-      "Protection",
-      "Two-Weapon Fighting"
-    ],
     "Subclasses": {
       "Champion": {
         "Subclass Features": {
@@ -494,10 +664,10 @@
       },
       "Battle Master": {
         "Subclass Features": {
-          "3": [ "Combat Superiority", "Student of War" ],
-          "7": [ "Know Your Enemy" ],
-          "10": [ "Improved Combat Superiority" ],
-          "15": [ "Relentless" ],
+          "3": [ "Combat Superiority", "Student of War", "Maneuvers (ccc)" ],
+          "7": [ "Know Your Enemy", "Maneuvers (cc)" ],
+          "10": [ "Improved Combat Superiority", "Maneuvers (cc)" ],
+          "15": [ "Relentless", "Maneuvers (cc)" ],
           "18": [ "Improved Combat Superiority+" ],
           "Maneuvers": [
             "Commander's Strike",
@@ -521,7 +691,7 @@
       },
       "Eldritch Knight": {
         "Subclass Features": {
-          "3": [ "Spellcasting", "Weapon Bond" ],
+          "3": [ "Spellcasting", "Weapon Bond", "_EnableMagic" ],
           "7": [ "War Magic" ],
           "10": [ "Eldritch Strike" ],
           "15": [ "Arcane Charge" ],
@@ -557,9 +727,35 @@
   "Monk": {
     "Hit Die": 8,
     "Saving Throws": [ "Str", "Dex" ],
+    "Equipment": {
+      "_Prop": {
+        "_Dive": [ "a", "s", "a" ]
+
+      },
+      "Equipment": [
+        [ "Short Sword", "Any Simple Weapon" ],
+        [ "Dungeoneer's Pack", "Explorer's Pack" ],
+        "10 Darts"
+      ]
+    },
+    "Preferred Attributes": {
+      "_Prop": {
+        "_Dive": [ "s", "a" ]
+      },
+      "Preferred Attributes": [
+        ["Dex", "Wis"]
+      ]
+    },
+    "Proficiencies": [
+      "Simple Weapons",
+      "Shortswords",
+      [ "Any Artisan Tools", "Any Musical Instrument" ]
+    ],
+    "Skill Choices": [ "Acrobatics", "Athletics", "History", "Insight", "Religion", "Stealth" ],
+    "Num Skill Choices": 2,
     "Core Features": {
       "1": [ "Unarmored Defense", "Martial Arts" ],
-      "2": [ "Ki", "Unarmored Movement" ],
+      "2": [ "Ki", "Unarmored Movement", "_EnableKi" ],
       "3": [ "Deflect Missiles" ],
       "4": [ "Ability Score Improvement", "Slow Fall" ],
       "5": [ "Extra Attack", "Stunning Strike" ],
@@ -579,7 +775,7 @@
       "19": [ "Ability Score Improvement" ],
       "20": [ "Perfect Self" ]
     },
-    "Martial Arts": [4,4,4,4,6,6,6,6,6,6,8,8,8,8,8,8,10,10,10],
+    "Martial Arts": [ 4, 4, 4, 4, 6, 6, 6, 6, 6, 6, 8, 8, 8, 8, 8, 8, 10, 10, 10 ],
     "Subclasses": {
       "Way of the Open Hand": {
         "Subclass Features": {
@@ -591,16 +787,20 @@
       },
       "Way of Shadow": {
         "Subclass Features": {
-          "3": ["Shadow Arts"],
-          "6": ["Shadow Step"],
-          "11": ["Cloak of Shadows"],
-          "17": ["Opporunist"]
+          "3": [ "Shadow Arts" ],
+          "6": [ "Shadow Step" ],
+          "11": [ "Cloak of Shadows" ],
+          "17": [ "Opporunist" ]
         }
       },
       "Way of the Four Elements": {
         "Subclass Features": {
-          "3": ["Disciple of the Elements"],
-          "Elemental Disciplines": [ "Breath of Winter (17th Level Required)",
+          "3": [ "Disciple of the Elements", "Elemental Disciplines (c)" ],
+          "6": [ "Elemental Disciplines (c)" ],
+          "11": [ "Elemental Disciplines (c)" ],
+          "17": [ "Elemental Disciplines (c)" ],
+          "Elemental Disciplines": [
+            "Breath of Winter (17th Level Required)",
             "Clench of the North Wind (6th Level Required)",
             "Elemental Attunement",
             "Eternal Mountain Defense (11th Level Required)",
@@ -621,30 +821,729 @@
         }
       }
     },
-    "Spell Modifier": "xxx",
+    "Spell Modifier": "Wis"
+  },
+  "Paladin": {
+    "Hit Die": 10,
+    "Saving Throws": [ "Wis", "Cha" ],
+    "Equipment": {
+      "_Prop": {
+        "_Dive": [ "a", "s", "a" ]
+
+      },
+      "Equipment": [
+        [
+          [ "Any Martial Weapon, Shield" ],
+          [ "Any Martial Weapon", "Any Martial Weapon" ]
+        ],
+        [
+          "Five Javelines",
+          "Any Simple Melee Weapon"
+        ],
+        [ "Priest's Pack", "Explorer's Pack" ],
+        "Chain Mail",
+        "Holy Symbol"
+      ]
+    },
+    "Preferred Attributes": {
+      "_Prop": {
+        "_Dive": [ "s", "a" ]
+      },
+      "Preferred Attributes": [
+        ["Str", "Cha"]
+      ]
+    },
+    "Proficiencies": [ "All Armor", "Shields", "Simple Weapons", "Martial Weapons" ],
+    "Skill Choices": [ "Athletics", "Insight", "Intimidation", "Medicine", "Persuasion", "Religion" ],
+    "Num Skill Choices": 2,
+    "Core Features": {
+      "1": [ "Divine Sense", "Lay on Hands" ],
+      "2": [ "Fighting Style (c)", "Spell Casting", "_EnableMagic" ],
+      "3": [ "Divine Health" ],
+      "4": [ "Ability Score Improvement" ],
+      "5": [ "Extra Attack" ],
+      "6": [ "Aura of Protection" ],
+      "7": [],
+      "8": [ "Ability Score Improvement" ],
+      "9": [],
+      "10": [ "Aura of Courage" ],
+      "11": [ "Improved Divine Smite" ],
+      "12": [ "Ability Score Improvement" ],
+      "13": [],
+      "14": [ "Cleansing Touch" ],
+      "15": [],
+      "16": [ "Ability Score Improvement" ],
+      "17": [],
+      "18": [ "Aura Improvements (-)" ],
+      "19": [ "Ability Score Improvement" ],
+      "20": [],
+      "Fighting Style": [ "Defense", "Dueling", "Great Weapon Fighting", "Protection" ]
+    },
+
+    "Subclasses": {
+      "Oath of Devotion": {
+        "Subclass Features": {
+          "3": [ "Channel Divinity: Sacred Weapon", "Channel Divinity: Turn the Unholy" ],
+          "7": [ "Aura of Devotion" ],
+          "15": [ "Purity of Spirit" ],
+          "20": [ "Holy Nimbus" ]
+        },
+        "Oath Spells": {
+          "3": [ "Protection from Evil and Good", "Sanctuary" ],
+          "5": [ "Lesser Restoration", "Zone of Truth" ],
+          "9": [ "Beacon of Hope", "Dispel Magic" ],
+          "13": [ "Freedom of Movement", "Guardian of Faith" ],
+          "17": [ "Commune", "Flame Strike" ]
+        }
+      },
+      "Oath of the Ancients": {
+        "Subclass Features": {
+          "3": [ "Channel Divinity: Nature's Wrath", "Channel Divinity: Turn the Faithless" ],
+          "7": [ "Aura of Warding" ],
+          "15": [ "Undying Sentinel" ],
+          "20": [ "Elder Champion" ]
+        },
+        "Oath Spells": {
+          "3": [ "Ensnaring Strike", "Speak with Animals" ],
+          "5": [ "Moonbeam", "Misty Step" ],
+          "9": [ "Plant Growth", "Protection from Energy" ],
+          "13": [ "Ice Storm", "Stoneskin" ],
+          "17": [ "Commune with Nature", "Tree Stride" ]
+        }
+      },
+      "Oath of Vengeance": {
+        "Subclass Features": {
+          "3": [ "Channel Divinity: Abjure Enemy", "Vow of Enmity" ],
+          "7": [ "Relentless Avenger" ],
+          "15": [ "Soul of Vengeance" ],
+          "20": [ "Avenging Angel" ]
+        },
+        "Oath Spells": {
+          "3": [ "Bane", "Hunter's Mark" ],
+          "5": [ "Hold Person", "Misty Step" ],
+          "9": [ "Haste", "Protection from Energy" ],
+          "13": [ "Banishment", "Dimension Door" ],
+          "17": [ "Hold Monster", "Scrying" ]
+        }
+      },
+      "Spell Slots": [
+        [ 0 ],
+        [ 0, 2 ],
+        [ 0, 3 ],
+        [ 0, 3 ],
+        [ 0, 4, 2 ],
+        [ 0, 4, 2 ],
+        [ 0, 4, 3 ],
+        [ 0, 4, 3 ],
+        [ 0, 4, 3, 2 ],
+        [ 0, 4, 3, 2 ],
+        [ 0, 4, 3, 3 ],
+        [ 0, 4, 3, 3 ],
+        [ 0, 4, 3, 3, 1 ],
+        [ 0, 4, 3, 3, 1 ],
+        [ 0, 4, 3, 3, 2 ],
+        [ 0, 4, 3, 3, 2 ],
+        [ 0, 4, 3, 3, 3, 1 ],
+        [ 0, 4, 3, 3, 3, 1 ],
+        [ 0, 4, 3, 3, 3, 2 ],
+        [ 0, 4, 3, 3, 3, 2 ]
+      ]
+    }
+  },
+  "Ranger": {
+    "Hit Die": 10,
+    "Saving Throws": [ "Str", "Dex" ],
+    "Equipment": {
+      "_Prop": {
+        "_Dive": [ "a", "s", "a" ]
+
+      },
+      "Equipment": [
+        [ "Scale Mail", "Leather Armor" ],
+        [
+          "Two Shortswords",
+          [ "Any Simple Melee Weapon", "Any Simple Melee Weapon" ]
+        ],
+        [ "Dungeoneer's Pack", "Explorer's Pack" ],
+        "Longbow",
+        "Quiver with 20 Arrows"
+      ]
+    },
+    "Preferred Attributes": {
+      "_Prop": {
+        "_Dive": [ "s", "a" ]
+      },
+      "Preferred Attributes": [
+        ["Dex", "Wis"]
+      ]
+    },
+    "Proficiencies": [ "Light Armor", "Medium Armor", "Shields", "All Simple Weapons", "All Martial Weapons" ],
+    "Skill Choices": [ "Animal Handling", "Athletics", "Insight", "Investigation", "Nature", "Perception", "Stealth", "Survival" ],
+    "Num Skill Choices": 3,
+    "Core Features": {
+      "1": [ "Favored Enemy (c)", "Natural Explorer (c)" ],
+      "2": [ "Fighting Style (c)", "Spellcasting" ],
+      "3": [ "Primeval Awareness" ],
+      "4": [ "Ability Score Improvement" ],
+      "5": [ "Extra Attack" ],
+      "6": [ "Favored Enemy (+)", "Natural Explorer (+)" ],
+      "7": [],
+      "8": [ "Ability Score Improvement", "Land's Stride" ],
+      "9": [],
+      "10": [ "Natural Explorer (++)", "Hide in Plain Sight" ],
+      "11": [],
+      "12": [ "Ability Score Improvement" ],
+      "13": [],
+      "14": [ "Favored Enemy (++)", "Vanish" ],
+      "15": [],
+      "16": [ "Ability Score Improvement" ],
+      "17": [],
+      "18": [ "Feral Senses" ],
+      "19": [ "Ability Score Improvement" ],
+      "20": [ "Foe Slayer" ],
+      "Fighting Style": [ "Archery", "Defense", "Dueling", "Two-Weapon Fighting" ],
+      "Favored Enemy": [ "Aberrationss", "Beasts", "Celestials", "Constructs", "Dragons", "Elementals", "Fey", "Fiends", "Giants", "Monstrosities", "Oozes", "Plants", "Undead" ],
+      "Natural Explorer": [ "Arctic", "Coast", "Desert", "Forest", "Grassland", "Mountain", "Swamp", "Underdark" ]
+    },
+    "Subclasses": {
+      "Hunter": {
+        "Subclass Features": {
+          "3": [ "Hunter's Prey (c)" ],
+          "7": [ "Defensive Tactics (c)" ],
+          "11": [ "Multiattack (c)" ],
+          "15": [ "Superior Hunter's Defense (c)" ],
+          "Hunter's Prey": [ "Colossus Slayer", "Giant Killer", "Horde Breaker" ],
+          "Defensive Tactics": [ "Escape the Horde", "Multiattack Defense", "Steel Will" ],
+          "Multiattack": [ "Volley", "Whirlwind Attack" ],
+          "Superior Hunter's Defense": [ "Evasion", "Stand Against the Tide", "Uncanny Dodge" ]
+        }
+      },
+      "Beast Master": {
+        "Subclass Features": {
+          "3": [ "Ranger's Companion" ],
+          "7": [ "Exceptional Training" ],
+          "11": [ "Bestial Fury" ],
+          "15": [ "Share Spells" ]
+        }
+      }
+    },
+    "Spell Modifier": "Wis",
     "Spell Slots": [
-      [ 2, 2 ],
-      [ 2, 3 ],
-      [ 2, 4, 2 ],
-      [ 3, 4, 3 ],
-      [ 3, 4, 3, 2 ],
-      [ 3, 4, 3, 3 ],
-      [ 3, 4, 3, 3, 1 ],
-      [ 3, 4, 3, 3, 2 ],
-      [ 3, 4, 3, 3, 3, 1 ],
-      [ 4, 4, 3, 3, 3, 2 ],
-      [ 4, 4, 3, 3, 3, 2, 1 ],
-      [ 4, 4, 3, 3, 3, 2, 1 ],
-      [ 4, 4, 3, 3, 3, 2, 2, 1 ],
-      [ 4, 4, 3, 3, 3, 2, 2, 1 ],
-      [ 4, 4, 3, 3, 3, 2, 1, 1, 1 ],
-      [ 4, 4, 3, 3, 3, 2, 1, 1, 1 ],
-      [ 4, 4, 3, 3, 3, 2, 1, 1, 1, 1 ],
-      [ 4, 4, 3, 3, 3, 2, 1, 1, 1, 1 ],
-      [ 4, 4, 3, 3, 3, 2, 2, 1, 1, 1 ],
-      [ 4, 4, 3, 3, 3, 2, 2, 2, 1, 1 ]
+      [ 0 ],
+      [ 0, 2 ],
+      [ 0, 3 ],
+      [ 0, 3 ],
+      [ 0, 4, 2 ],
+      [ 0, 4, 2 ],
+      [ 0, 4, 3 ],
+      [ 0, 4, 3 ],
+      [ 0, 4, 3, 2 ],
+      [ 0, 4, 3, 2 ],
+      [ 0, 4, 3, 3 ],
+      [ 0, 4, 3, 3 ],
+      [ 0, 4, 3, 3, 1 ],
+      [ 0, 4, 3, 3, 1 ],
+      [ 0, 4, 3, 3, 2 ],
+      [ 0, 4, 3, 3, 2 ],
+      [ 0, 4, 3, 3, 3, 1 ],
+      [ 0, 4, 3, 3, 3, 1 ],
+      [ 0, 4, 3, 3, 3, 2 ],
+      [ 0, 4, 3, 3, 3, 2 ]
     ],
-    "Spells Known": [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 15, 16, 18, 19, 19, 20, 22, 22, 22 ]
+    "Spells Known": [ 0, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11 ]
+  },
+  "Rogue": {
+    "Hit Die": 8,
+    "Saving Throws": [ "Dex", "Int" ],
+    "Equipment": {
+      "_Prop": {
+        "_Dive": [ "a", "s", "a" ]
+
+      },
+      "Equipment": [
+        [ "Rapier", "Shortsword" ],
+        [
+          [ "Shortbow", "Quiver of 20 arrows" ],
+          "Shortsword"
+        ],
+        [ "Burglar's Pack", "Dungeoneer's Pack", "Explorer's Pack" ],
+        "Leather Armor",
+        "Two Daggers",
+        "Thieve's Tools"
+      ]
+    },
+    "Preferred Attributes": {
+      "_Prop": {
+        "_Dive": [ "s", "a" ]
+      },
+      "Preferred Attributes": [
+        ["Dex", "Cha"],
+        [ "Dex", "Int (pre:subclass:Arcane Trickster)" ]
+      ]
+    },
+    
+    "Proficiencies": [ "Light Armor", "Simple Weapons", "Hand Crossbows", "Longswords", "Rapiers", "Shortswords", "Thieve's Tools" ],
+    "Skill Choices": [ "Acrobatics", "Athletics", "Deception", "Insight", "Intimidation", "Investigation", "Perception", "Performance", "Persuasion", "Sleight of Hand", "Stealth" ],
+    "Num Skill Choices": 4,
+    "Core Features": {
+      "1": [ "Expertise (c,c)", "Sneak Attack", "Thieves' Cant" ],
+      "2": [ "Cunning Action" ],
+      "3": [],
+      "4": [ "Ability Score Improvement" ],
+      "5": [ "Uncanny Dodge" ],
+      "6": [ "Expertise (c,c)" ],
+      "7": [ "Evasion" ],
+      "8": [ "Ability Score Improvement" ],
+      "9": [],
+      "10": [ "Ability Score Improvement" ],
+      "11": [ "Reliable Talent" ],
+      "12": [ "Ability Score Improvement" ],
+      "13": [],
+      "14": [ "Blindsense" ],
+      "15": [ "Slippery Mind" ],
+      "16": [ "Ability Score Improvement" ],
+      "17": [],
+      "18": [ "Elusive" ],
+      "19": [ "Ability Score Improvement" ],
+      "20": [ "Stroke of Luck" ]
+    },
+    "Subclasses": {
+      "Thief": {
+        "Subclass Features": {
+          "3": [ "Fast Hands", "Second-Story Work" ],
+          "9": [ "Supreme Sneak" ],
+          "13": [ "Use Magic Device" ],
+          "17": [ "Thief's Reflexes" ]
+        }
+      },
+      "Assassin": {
+        "Subclass Features": {
+          "3": [ "Bonus Proficiencies (Proficiency:Disguise Kit, Proficiency:Poisoner's Kit)", "Assassinate" ],
+          "9": [ "Infiltration Expertise" ],
+          "13": [ "Imposter" ],
+          "17": [ "Death Strike" ]
+        }
+      },
+      "Arcane Trickster": {
+        "Subclass Features": {
+          "3": [ "Spellcasting", "Mage Hand Legerdemain" ],
+          "9": [ "Magical Ambush" ],
+          "13": [ "Versatile Trickster" ],
+          "17": [ "Spell Thief" ]
+        },
+        "Spells": {
+          "3": [ "Mage Hand", "Any Cantrip", "Any Cantrip", "Any Level1 Illusion||Enchantment", "Any Level1 Illusion||Enchantment", "Any Level1" ]
+
+        },
+        "Spell List": "Wizard"
+      }
+    },
+    "Spell Modifier": "Int",
+    "Spell Slots": [
+      [ 0 ],
+      [ 0 ],
+      [ 3, 2 ],
+      [ 3, 3 ],
+      [ 3, 3 ],
+      [ 3, 3 ],
+      [ 3, 4, 2 ],
+      [ 3, 4, 2 ],
+      [ 3, 4, 2 ],
+      [ 4, 4, 3 ],
+      [ 4, 4, 3 ],
+      [ 4, 4, 3 ],
+      [ 4, 4, 3, 2 ],
+      [ 4, 4, 3, 2 ],
+      [ 4, 4, 3, 2 ],
+      [ 4, 4, 3, 3 ],
+      [ 4, 4, 3, 3 ],
+      [ 4, 4, 3, 3 ],
+      [ 4, 4, 3, 3, 1 ],
+      [ 4, 4, 3, 3, 1 ]
+    ],
+    "Spells Known": [ 0, 0, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 11, 11, 12, 13 ]
+  },
+  "Sorcerer": {
+    "Hit Die": 6,
+    "Saving Throws": [ "Con", "Cha" ],
+    "Equipment": {
+      "_Prop": {
+        "_Dive": [ "a", "s", "a" ]
+
+      },
+      "Equipment": [
+        [
+          [ "Light Crossbow", "20 Bolts" ],
+          "Any Simple Weapon"
+        ],
+        [ "Component Pouch", "Arcane Focus" ],
+        [ "Dungeoneer's Pack", "Explorer's Pack" ],
+        "Two Daggers"
+      ]
+    },
+    "Preferred Attributes": {
+      "_Prop": {
+        "_Dive": [ "s", "a" ]
+      },
+      "Preferred Attributes": [
+        ["Cha","Con"]
+      ]
+    },
+    "Proficiencies": [ "Daggers", "Darts", "Slings", "Quarterstaffs", "Light Crossbows" ],
+    "Skill Choices": [ "Arcana", "Deception", "Insight", "Intimidation", "Persuasion", "Religion" ],
+    "Num Skill Choices": 2,
+    "Core Features": {
+      "1": [
+        "Spellcasting",
+        "_EnableMagic"
+      ],
+      "2": [ "Font of Magic " ],
+      "3": [ "Metamagic (c)" ],
+      "4": [ "Ability Score Improvement" ],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [ "Ability Score Improvement" ],
+      "9": [],
+      "10": [ "Metamagic (c)" ],
+      "11": [],
+      "12": [ "Ability Score Improvement" ],
+      "13": [],
+      "14": [],
+      "15": [],
+      "16": [ "Ability Score Improvement" ],
+      "17": [ "Metamagic (c)" ],
+      "18": [],
+      "19": [ "Ability Score Improvement" ],
+      "20": [ "Sorcerous Restoration" ],
+      "Metamagic": [ "Careful Spell", "Distant Spell", "Empowered Spell", "Extended Spell", "Heightened Spell", "Quickened Spell", "Subtle Spell", "Twinned Spell" ]
+    },
+    "Subclasses": {
+      "Draconic Bloodline": {
+        "Subclass Features": {
+          "1": [ "Draconic Bloodline (c)", "Draconic Resilience" ],
+          "6": [ "Elemental Affinity" ],
+          "14": [ "Dragon Wings" ],
+          "18": [ "Draconic Presence" ],
+          "Draconic Bloodline": [ "Black", "Blue", "Brass", "Bronze", "Copper", "Gold", "Green", "Red", "Silver", "White" ]
+        }
+      },
+      "Wild Magic": {
+        "Subclass Features": {
+          "1": [ "Wild Magic Surge", "Tides of Chaos" ],
+          "6": [ "Bend Luck" ],
+          "14": [ "Controlled Chaos" ],
+          "18": [ "Spell Bombardment" ]
+        }
+      }
+    },
+    "Spell Modifier": "Cha",
+    "Spell Slots": [
+      [ 4, 2 ],
+      [ 4, 3 ],
+      [ 4, 4, 2 ],
+      [ 5, 4, 3 ],
+      [ 5, 4, 3, 2 ],
+      [ 5, 4, 3, 3 ],
+      [ 5, 4, 3, 3, 1 ],
+      [ 5, 4, 3, 3, 2 ],
+      [ 5, 4, 3, 3, 3, 1 ],
+      [ 6, 4, 3, 3, 3, 2 ],
+      [ 6, 4, 3, 3, 3, 2, 1 ],
+      [ 6, 4, 3, 3, 3, 2, 1 ],
+      [ 6, 4, 3, 3, 3, 2, 1, 1 ],
+      [ 6, 4, 3, 3, 3, 2, 1, 1 ],
+      [ 6, 4, 3, 3, 3, 2, 1, 1, 1 ],
+      [ 6, 4, 3, 3, 3, 2, 1, 1, 1 ],
+      [ 6, 4, 3, 3, 3, 2, 1, 1, 1, 1 ],
+      [ 6, 4, 3, 3, 3, 3, 1, 1, 1, 1 ],
+      [ 6, 4, 3, 3, 3, 3, 2, 1, 1, 1 ],
+      [ 6, 4, 3, 3, 3, 3, 2, 2, 1, 1 ]
+    ],
+    "Spells Known": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 12, 13, 13, 14, 14, 15, 15, 15, 15 ]
+  },
+  "Warlock": {
+    "Hit Die": 8,
+    "Saving Throws": [ "Wis", "Cha" ],
+    "Equipment": {
+      "_Prop": {
+        "_Dive": [ "a", "s", "a" ]
+
+      },
+      "Equipment": [
+        [
+          [ "Light Crossbow", "20 Bolts" ],
+          "Any Simple Weapon"
+        ],
+        [ "Componant Pouch", "Arcane Focus" ],
+        [ "Scholar's Pack", "Dungeoneer's Pack" ],
+        "Leather Armor",
+        "Any Simple Weapon",
+        "Two Daggers"
+      ]
+    },
+    "Preferred Attributes": {
+      "_Prop": {
+        "_Dive": [ "s", "a" ]
+      },
+      "Preferred Attributes": [
+        ["Cha", "Con"]
+      ]
+    },
+    "Proficiencies": [ "Light Armor", "Simple Weapons" ],
+    "Skill Choices": [ "Arcana", "Deception", "History", "Intimidation", "Investigation", "Nature", "Religion" ],
+    "Num Skill Choices": 2,
+
+    "Core Features": {
+      "1": [ "Pact Magic", "_EnableMagic" ],
+      "2": [ "Eldritch Invocation (c,c)" ],
+      "3": [ "Pact Boon (c)" ],
+      "4": [ "Ability Score Improvement" ],
+      "5": [ "Eldritch Invocation (c)" ],
+      "6": [],
+      "7": [ "_EldritchInvocation (c)" ],
+      "8": [ "Ability Score Improvement" ],
+      "9": [ "_EldritchInvocation (c)" ],
+      "10": [],
+      "11": [ "Mystic Arcanum (6th Level)" ],
+      "12": [ "Ability Score Improvement", "Eldritch Invocation (c)" ],
+      "13": [ "Mystic Arcanum (7th Level)" ],
+      "14": [],
+      "15": [ "Mystic Arcanum (8th Level)", "Eldritch Invocation (c)" ],
+      "16": [ "Ability Score Improvement" ],
+      "17": [ "Mystic Arcanum (6th Level)" ],
+      "18": [ "Eldritch Invocation (c)" ],
+      "19": [ "Ability Score Improvement" ],
+      "20": [],
+      "Pact Boon": [ "Pact of the Chain", "Pact of the Blade", "Pact of the Tome" ],
+      "Eldritch Invocations": [
+        "Agonizing Blast (pre:spell:Eldritch Blast)",
+        "Armor of Shadows",
+        "Ascendant Step (pre:level:9)",
+        "Beast Speech",
+        "Beguiling Speech",
+        "Bewitching Whispers (pre:level:7)",
+        "Book of Ancient Secrets (pre:feature:Pact Boon: Pact of the Tome)",
+        "Chains of Carceri (pre:level:15,pre:feature:Pact Boon: Pact of the Chain)",
+        "Devil's Sight",
+        "Dreadful Word (pre:level:7)",
+        "Eldritch Sight",
+        "Eldritch Spear (pre:spell:Eldritch Blast)",
+        "Eyes of the Rune Keeper",
+        "Fiendish Vigor",
+        "Gaze of Two Minds",
+        "Lifedrinker (pre:level:12,pre:feature:Pact Boon: Pact of the Blade)",
+        "Mask of Many Faces",
+        "Master of Myriad Forms (pre:level:15)",
+        "Minions of Chaos (pre:level:9)",
+        "Mire the Mind (pre:level:5)",
+        "Misty Visions",
+        "One with Shadows",
+        "Otherwordly Leap (pre:level:9)",
+        "Repelling Blast (pre:spell:Eldritch Blast)",
+        "Sculptor of Flesh (pre:level:7)",
+        "Sign of Ill Omen (pre:level:5)",
+        "Thief of Five Fates",
+        "Thirsting Blade (pre:level:5,pre:feature:Pact Boon: Pact of the Blade)",
+        "Visions of Distant Realms (pre:level:15)",
+        "Voice of the Chain Master (pre:feature:Pact Boon: Pact of the Chain)",
+        "Whispers of the Grave (pre:level:9)",
+        "Witch Sight (pre:level:15)"
+      ]
+    },
+    "Subclasses": {
+      "The Archfey": {
+        "Subclass Features": {
+          "1": [ "_ExpandedSpellList", "Fey Preseence" ],
+          "6": [ "Misty Escape" ],
+          "10": [ "Beguiling Defenses" ],
+          "14": [ "Dark Delerium" ]
+        },
+        "_ExpandedSpellList": [ "Faerie Fire", "Sleep", "Calm Emotions", "Phantasmal Force", "Blink", "Plant Growth", "Dominate Beast", "Greater Invisibility", "Dominate Person", "Seeming" ]
+      },
+      "The Fiend": {
+        "Subclass Features": {
+          "1": [ "_ExpandedSpellList", "Dark One's Blessing" ],
+          "6": [ "Dark One's Own Luck" ],
+          "10": [ "Fiendish Resilience" ],
+          "14": [ "Hurl Through Hell" ]
+        },
+        "_ExpandedSpellList": [ "Burning Hands", "Command", "Blindness/Deafness", "Scorching Ray", "Fireball", "Stinking Cloud", "Fire Shield", "Wall of Fire", "Flame Strike", "Hallow" ]
+      },
+      "The Great Old One": {
+        "Subclass Features": {
+          "3": [ "_ExpandedSpellList", "Awakened Mind" ],
+          "6": [ "Entropic Ward" ],
+          "10": [ "Thought Shield" ],
+          "14": [ "Create Thrall" ],
+          "_ExpandedSpellList": [ "Dissonant Whispers", "Tasha's Hideous Laughter", "Detect Thoughts", "Phantasmal Force", "Clairvoyance", "Sending", "Dominate Beast", "Evard's Black Tentacles", "Dominate Person", "Telekinesis" ]
+        }
+      }
+    },
+    "Spell Modifier": "Cha",
+    "Spell Slots": [
+      [ 2, 1 ],
+      [ 2, 2 ],
+      [ 2, 0, 2 ],
+      [ 3, 0, 2 ],
+      [ 3, 0, 0, 2 ],
+      [ 3, 0, 0, 2 ],
+      [ 3, 0, 0, 0, 2 ],
+      [ 3, 0, 0, 0, 2 ],
+      [ 3, 0, 0, 0, 0, 2 ],
+      [ 4, 0, 0, 0, 0, 2 ],
+      [ 4, 0, 0, 0, 0, 3 ],
+      [ 4, 0, 0, 0, 0, 3 ],
+      [ 4, 0, 0, 0, 0, 3 ],
+      [ 4, 0, 0, 0, 0, 3 ],
+      [ 4, 0, 0, 0, 0, 3 ],
+      [ 4, 0, 0, 0, 0, 3 ],
+      [ 4, 0, 0, 0, 0, 4 ],
+      [ 4, 0, 0, 0, 0, 4 ],
+      [ 4, 0, 0, 0, 0, 4 ],
+      [ 4, 0, 0, 0, 0, 4 ]
+    ],
+    "Spells Known": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15 ]
+  },
+  "Wizard": {
+    "Hit Die": 6,
+    "Saving Throws": [ "Int", "Wis" ],
+    "Equipment": {
+      "_Prop": {
+        "_Dive": [ "a", "s", "a" ]
+
+      },
+      "Equipment": [
+        [ "Quarterstaff", "Dagger" ],
+        [ "Componant Pouch", "Arcane Focus" ],
+        [ "Scholar's Pack", "Explorer's Pack" ],
+        "Spellbook"
+      ],
+      "Preferred Attributes": {
+        "_Prop": {
+          "_Dive": [ "s", "a" ]
+        },
+        "Preferred Attributes": [
+          ["Int", "Dex"],
+          ["Int", "Con"]
+        ]
+      },
+      "Proficiencies": [ "Daggers", "Darts", "Slings", "Quarterstaffs", "Light Crossbows" ],
+      "Skill Choices": [ "Arcana", "History", "Insight", "Investigation", "Medicine", "Religion" ],
+      "Num Skill Choices": 2,
+      "Core Features": {
+        "1": [ "Spellcasting", "Arcane Recovery", "_EnableMagic" ],
+        "2": [],
+        "3": [],
+        "4": [ "Ability Score Improvement" ],
+        "5": [],
+        "6": [],
+        "7": [],
+        "8": [ "Ability Score Improvement" ],
+        "9": [],
+        "10": [],
+        "11": [],
+        "12": [ "Ability Score Improvement" ],
+        "13": [],
+        "14": [],
+        "15": [],
+        "16": [ "Ability Score Improvement" ],
+        "17": [],
+        "18": [ "Spell Mastery" ],
+        "19": [ "Ability Score Improvement" ],
+        "20": [ "Signature Spell" ]
+      },
+      "Subclasses": {
+        "School of Abjuration": {
+          "Subclass Features": {
+            "2": [ "Abjuration Savant", "Arcane Ward" ],
+            "6": [ "Projected Ward" ],
+            "10": [ "Improved Abjuration" ],
+            "14": [ "Spell Resistance" ]
+          }
+        },
+        "School of Conjuration": {
+          "Subclass Features": {
+            "2": [ "Conjuration Savant", "Minor Conjuration" ],
+            "6": [ "Benign Transposition" ],
+            "10": [ "Focused Conjuration" ],
+            "14": [ "Durable Summons" ]
+          }
+        },
+        "School of Divination": {
+          "Subclass Features": {
+            "2": [ "Divination Savant", "Portent" ],
+            "6": [ "Expert Divination" ],
+            "10": [ "The Third Eye" ],
+            "14": [ "Greater Portent" ]
+          }
+        },
+        "School of Enchantment": {
+          "Subclass Features": {
+            "2": [ "Enchantment Savant", "Hypnotic Gaze" ],
+            "6": [ "Instinctive Charm" ],
+            "10": [ "Split Enchantment" ],
+            "14": [ "Alter Memories" ]
+          }
+        },
+        "School of Evocation": {
+          "Subclass Features": {
+            "2": [ "Evocation Savant", "Sculpt Spells" ],
+            "6": [ "Potent Cantrip" ],
+            "10": [ "Empowered Evocation" ],
+            "14": [ "Overchannel" ]
+          }
+        },
+        "School of Illusion": {
+          "Subclass Features": {
+            "2": [ "Illusion Savant", "Improved Minor Illusion" ],
+            "6": [ "Malleable Illusions" ],
+            "10": [ "Illusory Self" ],
+            "14": [ "Illusory Reality" ]
+          }
+        },
+        "School of Necromancy": {
+          "Subclass Features": {
+            "2": [ "Necromancy Savant", "Grim Harvest" ],
+            "6": [ "Undead Thralls" ],
+            "10": [ "Inured to Undeath" ],
+            "14": [ "Command Undead" ]
+          }
+        },
+        "School of Transmutation": {
+          "Subclass Features": {
+            "2": [ "Transmutation Savant", "Minor Alchemy" ],
+            "6": [ "Transmuter's Stone" ],
+            "10": [ "Shapechanger" ],
+            "14": [ "Master Transmuter" ]
+          }
+        }
+      },
+      "Spell Modifier": "Int",
+      "Spell Slots": [
+        [ 3, 2 ],
+        [ 3, 3 ],
+        [ 3, 4, 2 ],
+        [ 4, 4, 3 ],
+        [ 4, 4, 3, 2 ],
+        [ 4, 4, 3, 3 ],
+        [ 4, 4, 3, 3, 1 ],
+        [ 4, 4, 3, 3, 2 ],
+        [ 4, 4, 3, 3, 3, 1 ],
+        [ 5, 4, 3, 3, 3, 2 ],
+        [ 5, 4, 3, 3, 3, 2, 1 ],
+        [ 5, 4, 3, 3, 3, 2, 1 ],
+        [ 5, 4, 3, 3, 3, 2, 2, 1 ],
+        [ 5, 4, 3, 3, 3, 2, 2, 1 ],
+        [ 5, 4, 3, 3, 3, 2, 2, 1, 1 ],
+        [ 5, 4, 3, 3, 3, 2, 2, 1, 1 ],
+        [ 5, 4, 3, 3, 3, 2, 2, 1, 1, 1 ],
+        [ 5, 4, 3, 3, 3, 2, 3, 1, 1, 1 ],
+        [ 5, 4, 3, 3, 3, 2, 3, 1, 1, 1 ],
+        [ 5, 4, 3, 3, 3, 2, 3, 2, 1, 1 ]
+      ],
+      "Spells Known": [ 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44 ]
+    }
   }
 }
 
