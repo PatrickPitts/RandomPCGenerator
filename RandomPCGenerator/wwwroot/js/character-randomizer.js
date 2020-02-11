@@ -1,18 +1,15 @@
-﻿
+﻿$(document).ready(function () {
 
+    $("#appear").click(function () {
+        $("#text").html("Button Clicked at least");
+        $.getJSON("data/ChrClass.json", function (data) {
+            var txt = JSON.stringify(data);
+            $("#text").html(txt);
+        });
+    });
 
-function getCharacterJSON() {
-    let xhr = new XMLHttpRequest();
-    xhr.open('Get', '~/data/ChrClass.json', true);
-    xhr.responseType = 'text';
-    document.getElementById("text").innerHTML = "Button clicked"
-    xhr.onload = function () {
-        if (this.status === 200) {
-            document.getElementById("text").innerHTML = JSON.parse(xhr.responseText);
-        }
-    }
+    $("#disappear").click(function () {
+        $("#text").hide();
+    });
 
-}
-    
-
-
+});
