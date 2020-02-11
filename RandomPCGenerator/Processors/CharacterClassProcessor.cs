@@ -72,7 +72,7 @@ namespace RandomPCGenerator.Processors
             IList<string> SubclassOptions = ((JObject) ChrClassObject["Subclasses"]).Properties().Select(p => p.Name).ToList();
             Character.SubclassName = SubclassOptions[random.Next(SubclassOptions.Count)];
             JObject JSubclass = (JObject)((JObject) ChrClassObject["Subclasses"])[Character.SubclassName];
-            foreach(String key in JSubclass.Properties().Select(p => p.Name))
+            /*foreach(String key in JSubclass.Properties().Select(p => p.Name))
             {
                 if(key.ToLower().Contains("spell") || key.ToLower().Contains("spells"))
                 {
@@ -85,7 +85,7 @@ namespace RandomPCGenerator.Processors
                     }
                     AddSpellsToCharacter(Character, (JObject)jt);
                 }
-            }
+            }*/
 
 
             return Character;
