@@ -196,7 +196,7 @@
       "_Prop": {
         "_Choose": 3
       },
-      "Skill Choices": [ "Any Skill" ]
+      "Skill Choices": [ "any:skill", "any:skill", "any:skill" ]
     },
 
       "Core Features": {
@@ -271,10 +271,7 @@
       "Equipment": [
         [ "Mace", "Warhammer (pre:proficiency:Warhammer)" ],
         [ "Scale Mail", "Leather Armor", "Chain Mail (pre:proficiency:Chain Mail)" ],
-        [
-          [ "Light Crossbow", "20 Bolts" ],
-          "Any Simple Weapon"
-        ],
+        [[ "Light Crossbow", "20 Bolts" ],"Any Simple Weapon"],
         [ "Priest's Pack", "Explorer's Pack" ],
         "Shield",
         "Holy Symbol"
