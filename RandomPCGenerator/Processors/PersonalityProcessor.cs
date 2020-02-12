@@ -3,7 +3,6 @@ using RandomPCGenerator.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace RandomPCGenerator.Processors
 {
@@ -19,16 +18,17 @@ namespace RandomPCGenerator.Processors
 
             IList<string> keys = efObject.Properties().Select(p => p.Name).ToList();
 
-            foreach(string key in keys)
+            foreach (string key in keys)
             {
                 var val = efObject[key];
                 //only lists of options for a particular feature can be cast as JArray; checks for this, and randomly
                 //selects one of those options.
-                if(val is JArray)
+                if (val is JArray)
                 {
                     IList<string> featureList = val.ToObject<IList<string>>();
                     featursDict.Add(key, featureList[random.Next(featureList.Count)]);
-                } else
+                }
+                else
                 {
                     featursDict.Add(key, val.ToString());
                 }
@@ -48,7 +48,7 @@ namespace RandomPCGenerator.Processors
 
             background.Name = names[random.Next(names.Count)];
 
-            JObject JSONBackground = (JObject) obj[background.Name];
+            JObject JSONBackground = (JObject)obj[background.Name];
             IList<string> bgKeys = JSONBackground.Properties().Select(p => p.Name).ToList();
 
             JObject JCharacteristics = (JObject)JSONBackground["Characteristics"];

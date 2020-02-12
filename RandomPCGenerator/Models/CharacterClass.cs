@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace RandomPCGenerator.Models
 {
@@ -17,7 +15,7 @@ namespace RandomPCGenerator.Models
         public IList<string> Spells { set; get; } = new List<string>();
         public string SpellModifier { set; get; }
         public string Source { set; get; } = "PHB";
-        public int ClassLevel {set; get;} = 1;
+        public int ClassLevel { set; get; } = 1;
         public IList<string> ClassFeatures { set; get; } = new List<string>();
 
         public CharacterClass() { }
@@ -26,20 +24,20 @@ namespace RandomPCGenerator.Models
         {
             StringBuilder text = new StringBuilder();
             text.AppendLine("Class: Level ").Append(ClassLevel).Append(" ").Append(ClassName);
-            if(SubclassName !is null)
+            if (SubclassName! is null)
             {
                 text.AppendLine("Subclass: ").Append(SubclassName);
             }
             text.AppendLine("Hit Die: d").Append(HitDie);
             text.AppendLine("Features: ");
-            foreach(String feature in ClassFeatures)
+            foreach (String feature in ClassFeatures)
             {
                 text.AppendLine(feature);
             }
-            if(Spells.Count > 0)
+            if (Spells.Count > 0)
             {
                 text.AppendLine("Spells: ");
-                foreach(String spellName in Spells)
+                foreach (String spellName in Spells)
                 {
                     text.AppendLine(spellName);
                 }

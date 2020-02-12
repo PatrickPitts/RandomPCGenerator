@@ -1,5 +1,3 @@
-using System;
-
 namespace RandomPCGenerator.Models
 {
     public class ErrorViewModel

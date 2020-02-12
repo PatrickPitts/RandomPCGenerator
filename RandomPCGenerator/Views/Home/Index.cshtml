@@ -2,12 +2,22 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <div id="text">Text</div>
-    <button id="appear" name="appear">JSON Awayyyyy!</button><br>
+<div class="text-left">
+    
+    
+    <button id="rand-chr-class" name="appear">Random Character Class</button>
+        <label for="chr-level">Character Level: </label><select id="chr-level" size="1">
+            @for(int i = 1; i <= 20; i++)
+            { <option value="@i">@i</option>}
+        </select>
+    <br>
     <button id="disappear" name="disappear">Disappear it</button>
+</div>
+<div class="text-right">
+    <div  id="results">Waiting</div>
+    <table id="random-chr-display">
+
+    </table>
 </div>
 
 

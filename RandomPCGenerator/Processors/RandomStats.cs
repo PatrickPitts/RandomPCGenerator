@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace RandomPCGenerator.Processors
 {
@@ -12,7 +11,7 @@ namespace RandomPCGenerator.Processors
         public static int[] Random3d6()
         {
             int[] statBlock = new int[6];
-            for(int i=0; i < 6; i++)
+            for (int i = 0; i < 6; i++)
             {
                 statBlock[i] = random.Next(1, 7) + random.Next(1, 7) + random.Next(1, 7);
             }
@@ -23,9 +22,9 @@ namespace RandomPCGenerator.Processors
         {
             int[] statBlock = new int[6];
             List<int> temp = new List<int> { 0, 0, 0, 0 };
-            for(int i = 0; i < 6; i++)
+            for (int i = 0; i < 6; i++)
             {
-                for(int j = 0; j < 4; j++)
+                for (int j = 0; j < 4; j++)
                 {
                     temp[j] = random.Next(1, 7);
                 }
@@ -48,7 +47,7 @@ namespace RandomPCGenerator.Processors
                 Results.Add(TheNumbers[RandomIndex]);
                 TheNumbers.RemoveAt(RandomIndex);
             }
-           
+
             return Results.ToArray();
         }
     }

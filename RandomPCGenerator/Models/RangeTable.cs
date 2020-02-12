@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace RandomPCGenerator.Models
 {
@@ -35,11 +34,11 @@ namespace RandomPCGenerator.Models
              * This method gets a random integer between the lowest value of the first Ranges tuple and the higher value of the last Ranges tuple
              */
             Random random = new Random();
-            int rollResult = random.Next(Entries[0].Item1.Item1, Entries.Last().Item1.Item2+1);
-            foreach(Tuple<Tuple<int,int>,string> entry in Entries)
+            int rollResult = random.Next(Entries[0].Item1.Item1, Entries.Last().Item1.Item2 + 1);
+            foreach (Tuple<Tuple<int, int>, string> entry in Entries)
             {
                 Tuple<int, int> range = entry.Item1;
-                if(rollResult >= range.Item1 && rollResult <= range.Item2)
+                if (rollResult >= range.Item1 && rollResult <= range.Item2)
                 {
                     return entry.Item2;
                 }
