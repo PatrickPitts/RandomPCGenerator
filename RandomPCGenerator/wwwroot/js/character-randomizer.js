@@ -2,8 +2,14 @@
 
     $("#rand-chr-class").click(function () {
         $("#results").html("Clicked");
-        var chrClassObject;
+
         $.getJSON("data/ChrClass.json", function (data) {                      
+            $("#random-chr-display").html(processCharacter(data));
+        });
+    });
+
+    $("#rand-char").click(function () {
+        $.getJSON("data/Race.json", function (data) {
             $("#random-chr-display").html(processCharacter(data));
         });
     });
@@ -93,6 +99,12 @@
 
 
         return list;
+    }
+
+    function processRace(object) {
+        var text = "<table>";
+
+        text += "</table>"
     }
 
     function processCharacter(object) {
