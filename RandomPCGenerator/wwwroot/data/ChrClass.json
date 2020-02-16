@@ -1151,7 +1151,8 @@
         "17": [],
         "18": [ "Elusive" ],
         "19": [ "Ability Score Improvement" ],
-        "20": [ "Stroke of Luck" ]
+        "20": [ "Stroke of Luck" ],
+        "Expertise": ["(skills)"]
       },
       "Subclasses": {
         "Thief": {

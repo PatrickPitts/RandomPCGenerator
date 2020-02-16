@@ -105,6 +105,7 @@
         var featuresList = [];
         var spellList = [];
         var equipmentList = [];
+        var proficiencyList = [];
         
         var test = [1, 2, 3];
         var test2 = [4, 5, 6];
@@ -127,6 +128,14 @@
         $.each(character, function (key, value) {
             text += "<tr>"
             switch (key) {
+                case "Proficiencies":
+                    text += "<td>Other Proficiencies</td><td>";
+                    $(value).each(function (index, value) {
+                        
+                    });
+
+
+                    break;
                 case "Core Features":
                     for (var i = 1; i <= level; i++) {
 
