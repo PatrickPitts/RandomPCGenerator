@@ -1,75 +1,71 @@
 {
   "_Race": {
-    "MechFeatures": 
-      "Ability Score Increase": [ "xxx+0" ],
-      "Speed": [ "0", "0s", "0f" ],
-      "Features": {
 
-        "Featrures": [
+    "Ability Score Increase": [ "xxx+0" ],
+    "Speed": [ "0", "0s", "0f" ],
+    "Features": {
 
-          "(proficiencey:Common,-)",
-          "ChooseFeature1 (c)",
-          "Subrace (c,-)"
+      "Featrures": [
 
-        ],
-        "ChooseFeature1": [ "", "" ],
-        "Subrace": {
-          "sr1": {
-            "Ability Score Increase": [ "" ],
-            "Features": {
-              "Features": [ "(append:Race:title)" ]
-            }
-          },
-          "sr2": {
-            "Ability Score Increase": [ "" ],
+        "(proficiencey:Common,-)",
+        "ChooseFeature1 (c)",
+        "Subrace (c,-)"
+
+      ],
+      "ChooseFeature1": [ "", "" ],
+      "Subrace": {
+        "sr1": {
+          "Ability Score Increase": [ "" ],
+          "Features": {
             "Features": [ "(append:Race:title)" ]
           }
         },
-        "None": "(-)"
-      }
+        "sr2": {
+          "Ability Score Increase": [ "" ],
+          "Features": [ "(append:Race:title)" ]
+        }
+      },
+      "None": "(-)"
 
+
+    }
   },
   "Dwarf": {
-    "MechFeatures": {
-      "Ability Score Increase": [ "Con+2" ],
-      "Speed": [ "25", "0s", "0f" ],
-      "Features": {
-        "Featrures": [
+    "Ability Score Increase": [ "Con+2" ],
+    "Speed": [ "25", "0s", "0f" ],
+    "Features": {
+      "Featrures": [
           "Darkvision",
           "Dwarven Resilience",
           "Dwarven Combat Training",
-          "Tool Proficiency (c)",
+          "Tool Proficiency (c,-)",
           "Stonecunning",
           "(proficiencey:Common,-)",
           "(proficiency:language:Dwarvish,-)",
           "Subrace (c,-)"
-
-        ],
-        "Tool Proficiency": [ "Smith's Tools", "Brewer's Supplies", "Mason's Tools" ],
-        "Subrace": {
-          "Hill Dwarf": {
-            "Ability Score Increase": [ "Wis+1" ],
-            "Features": {
-              "Features": [ "Dwarven Toughness", "(append:Race:title)" ]
+      ],
+      "Tool Proficiency": [ "Smith's Tools", "Brewer's Supplies", "Mason's Tools" ],
+      "Subrace": {
+        "Hill Dwarf": {
+          "Ability Score Increase": [ "Wis+1" ],
+          "Features": {
+            "Features": [ "Dwarven Toughness", "(append:Race:title)" ]
             }
           },
-          "Mountain Dwarf": {
-            "Ability Score Increase": [ "Str+2" ],
-            "Features": [ "Dwarven Armor Training", "(append:Race:title)" ]
+        "Mountain Dwarf": {
+          "Ability Score Increase": [ "Str+2" ],
+          "Features": [ "Dwarven Armor Training", "(append:Race:title)" ]
           },
-          "None": ["(-)"]
+        "None": ["(-)"]
         }
-      }
-
-    } 
+      }  
   },
   "Elf": {
-    "MechFeatures": {
+    
       "Ability Score Increase": [ "Dex+2" ],
       "Speed": [ "30", "0s", "0f" ],
       "Features": {
         "Featrures": [
-
           "Darkvision",
           "Keen Senses",
           "Fey Ancestry",
@@ -77,7 +73,6 @@
           "(proficiencey:Common,-)",
           "(proficiency:language:Elvish,-)",
           "Subrace (c,-)"
-
         ],
         "Subrace": {
           "High Elf": {
@@ -98,45 +93,46 @@
         }
       }
 
-    }
+    
   },
   "Halfling": {
-    "MechFeatures": {
+    
       "Ability Score Increase": [ "Dex+2" ],
       "Speed": [ "25", "0s", "0f" ],
-      "Features": {
+    "Features": {
 
-        "Featrures": [
+      "Featrures": [
 
-          "Lucky",
-          "Brave",
-          "Halfling Nibleness",
-          "(proficiencey:Common,-)",
-          "(proficiency:language:Halfling,-)",
-          "Subrace (c,-)"
+        "Lucky",
+        "Brave",
+        "Halfling Nibleness",
+        "(proficiencey:Common,-)",
+        "(proficiency:language:Halfling,-)",
+        "Subrace (c,-)"
 
-        ],
-        "ChooseFeature1": [ "", "" ],
-        "Subrace": {
-          "Lightfoot": {
-            "Ability Score Increase": [ "Cha+1" ],
-            "Features": {
-              "Features": [ "Naturally Stealthy" ]
-            }
-          },
-          "Stout": {
-            "Ability Score Increase": [ "Con+1" ],
-            "Features": [ "Stout Resilience" ]
-          },
-          "None": ["(-)"]
+      ],
+      "Subrace": {
+        "Lightfoot": {
+          "Ability Score Increase": [ "Cha+1" ],
+          "Features": {
+            "Features": [ "Naturally Stealthy" ]
+          }
+        },
+        "Stout": {
+          "Ability Score Increase": [ "Con+1" ],
+          "Features": [ "Stout Resilience" ]
+        },
+        "None": [ "(-)" ]
 
-        }
       }
 
+
     }
+
+    
   },
   "Human": {
-    "MechFeatures": {
+    
       "Ability Score Increase": [ "(abilityScore:all:1)" ],
       "Speed": [ "30", "0s", "0f" ],
       "Features": {
@@ -145,10 +141,10 @@
           "(proficiency:language:any,-)"
         ]
       }
-    }
+    
   },
   "Human(variant,-)": {
-    "MechFeatures": {
+    
       "Ability Score Increase": [ "(abilityScore:any2:1)" ],
       "Speed": [ "30", "0s", "0f" ],
       "Features": {
@@ -160,10 +156,10 @@
 
         ]
       }
-    }
+    
   },
   "Dragonborn": {
-    "MechFeatures": {
+    
       "Ability Score Increase": [ "Str+2", "Cha+1" ],
       "Speed": [ "30", "0s", "0f" ],
       "Features": {
@@ -180,40 +176,39 @@
         "Draconic Ancestry": [ "Black", "Blue", "Brass", "Bronze", "Copper", "Gold", "Green", "Red", "Silver", "White" ]
 
       }
-    }
+    
   },
   "Gnome": {
-    "MechFeatures": {
+    
       "Ability Score Increase": [ "Int+2" ],
       "Speed": [ "25", "0s", "0f" ],
-      "Features": {
+    "Features": {
 
-        "Featrures": [
+      "Featrures": [
 
-          "Darkvision",
-          "Gnome Cunning",
-          "(proficiencey:Common,-)",
-          "(proficiency:language:Gnomish,-)",
-          "Subrace (c,-)"
+        "Darkvision",
+        "Gnome Cunning",
+        "(proficiencey:Common,-)",
+        "(proficiency:language:Gnomish,-)",
+        "Subrace (c,-)"
 
-        ],
-        "ChooseFeature1": [ "", "" ],
-        "Subrace": [ "None", "Forest Gnome", "Rock Gnome" ]
-      }
-
-    },
-    "Subrace": {
-      "Forest Gnome": {
-        "Ability Score Increase": [ "Dex+1" ],
-        "Features": {
-          "Features": [ "Natural Illusionist", "Speak with Small Beasts" ]
+      ],
+      "Subrace": {
+        "Forest Gnome": {
+          "Ability Score Increase": [ "Dex+1" ],
+          "Features": {
+            "Features": [ "Natural Illusionist", "Speak with Small Beasts" ]
+          }
+        },
+        "Rock Gnome": {
+          "Ability Score Increase": [ "Con+1" ],
+          "Features": [ "Artificer's Lore", "Tinker" ]
         }
-      },
-      "Rock Gnome": {
-        "Ability Score Increase": [ "Con+1" ],
-        "Features": [ "Artificer's Lore", "Tinker" ]
       }
     }
+
+    
+    
   },
   "Half-Elf": {
       "Ability Score Increase": [ "Cha+2", "(abilityScore:any2:1)" ],
@@ -251,7 +246,7 @@
     
   },
   "Tiefling": {
-    "MechFeatures": {
+    
       "Ability Score Increase": [ "Int+1", "Cha+2" ],
       "Speed": [ "30", "0s", "0f" ],
       "Features": {
@@ -259,12 +254,12 @@
         "Featrures": [
           "Darkvision",
           "Hellish Resistance",
-          "Infernal Legacy"
+          "Infernal Legacy",
           "(proficiencey:Common,-)",
           "(proficiencey:Infernal,-)"
         ]
       }
 
-    }
+    
   }
 }
